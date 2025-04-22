@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão Completa de Clientes</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <h1>Gestão de Clientes</h1>
+
+            <!-- Formulário Principal -->
+            <div class="card">
+                <form id="formCliente">
+                    <input type="text" id="nome" placeholder="Nome do Cliente" required>
+                    <input type="text" id="endereco" placeholder="Endereço">
+                    <button type="submit">Cadastrar Novo Cliente</button>
+                </form>
+            </div>
+
+            <!-- Lista de Clientes -->
+            <div id="listaClientes" class="card"></div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="card"></div>
+
+        <!-- Modais -->
+        <div class="modal" id="modalCliente">
+            <div class="modal-conteudo">
+                <h2>Editar Cliente</h2>
+                <input type="text" id="editarNome">
+                <input type="text" id="editarEndereco">
+                <div class="modal-botoes">
+                    <button onclick="salvarEdicaoCliente()">Salvar</button>
+                    <button onclick="fecharModal('modalCliente')">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modalCompra">
+            <div class="modal-conteudo">
+                <h2>Gerenciar Compra</h2>
+                <input type="text" id="compraDescricao" placeholder="Nome do Produto">
+                <input type="number" id="compraValor" placeholder="Valor de compra" step="0.01">
+                <input type="number" id="vendaValor" placeholder="Valor de venda" step="0.01">
+                <div class="modal-botoes">
+                    <button onclick="salvarCompra()">Salvar</button>
+                    <button onclick="fecharModal('modalCompra')">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

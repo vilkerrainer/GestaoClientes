@@ -1,0 +1,339 @@
+:root {
+  --cor-primaria: #006A71;
+  --cor-secundaria: #48A6A7;
+  --cor-terciaria: #9ACBD0;
+  --cor-fundo: #F2EFE7;
+  --cor-texto: #333333;
+  --cor-texto-claro: #FFFFFF;
+  --cor-sucesso: #4CAF50;
+  --cor-alerta: #FF9800;
+  --cor-erro: #F44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ========== HEADER ========== */
+h1 {
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+/* ========== CARD ========== */
+.card {
+  background-color: var(--cor-texto-claro);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* ========== FORMULÁRIO ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--cor-terciaria);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--cor-secundaria);
+}
+
+button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+
+/* ========== CLIENTES ========== */
+.cliente-item {
+  background-color: var(--cor-texto-claro);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cliente-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.cliente-info {
+  margin-bottom: 15px;
+}
+
+.cliente-acoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-excluir {
+  background-color: var(--cor-erro);
+}
+
+/* ========== COMPRAS ========== */
+.compras-lista {
+  margin-top: 15px;
+  border-top: 1px solid var(--cor-terciaria);
+  padding-top: 15px;
+}
+
+.compra-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: var(--cor-fundo);
+  border-radius: 6px;
+}
+
+.compra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.compra-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.valor-compra {
+  color: var(--cor-erro);
+  font-weight: bold;
+}
+
+.valor-venda {
+  color: var(--cor-sucesso);
+  font-weight: bold;
+}
+
+.lucro {
+  font-weight: bold;
+}
+
+.lucro.positivo {
+  color: var(--cor-sucesso);
+}
+
+.lucro.negativo {
+  color: var(--cor-erro);
+}
+
+.compra-status {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.compra-acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* ========== DASHBOARD ========== */
+#dashboard {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  margin-top: 5%;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.dashboard-card h3 {
+  color: var(--cor-texto-claro);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dashboard-card p {
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* ========== MODAIS ========== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: var(--cor-texto-claro);
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ========== STATUS ========== */
+.pago {
+  color: var(--cor-sucesso);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pendente {
+  color: var(--cor-erro);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .cliente-item, .compra-item {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* ========== LAYOUT RESPONSIVO ========== */
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .compra-item {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      align-items: center;
+  }
+  
+  .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+  .container {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+  
+  .main-content {
+      flex: 2;
+  }
+  
+  #dashboard {
+      flex: 1;
+      position: sticky;
+      top: 20px;
+  }
+  
+  .dashboard-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .compra-item {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+}
+
+/* Mobile - Dashboard no topo */
+@media (max-width: 767px) {
+  #dashboard {
+      order: -1;
+  }
+  
+  .cliente-acoes button,
+  .compra-acoes button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+  }
+  
+  .card {
+      padding: 15px;
+  }
+}
